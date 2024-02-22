@@ -75,32 +75,3 @@ if vencedor==0:
 else:
   tabuleiro(Add)
   print("Deu velha")
-    tabuleiro(Add)
-    print("O wins")
-    vencedor=0
-    break
-  if Add[0][0] == "O" and Add[1][1] == "O" and Add[2][2]== "O":
-    tabuleiro(Add)
-    print("0 wins")
-    vencedor=0
-    break
-  if Add[0][2] == "0" and Add[1][1] == "0" and Add[2][0]== "O":
-    tabuleiro(Add)
-    print("0 wins")
-    vencedor=0
-    break
-  if Add[1][1] == "0" and Add[0][1] == "0" and Add[1][2]== "O":
-    tabuleiro(Add)
-    print("0 wins")
-    vencedor=0
-    break
-  if Add[2][2] == "O" and Add[2][1] == "O" and Add[0][2]== "O":
-    tabuleiro(Add)
-    print("0 wins")
-    vencedor=0
-    break
-if vencedor==0:
-  vencedor=vencedor
-else:
-  tabuleiro(Add)
-  print("Deu velha")
