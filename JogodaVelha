@@ -43,6 +43,23 @@ while (jogador<9):
       print("X wins")
       vencedor=0
       break
+    if Add[0][0] == "X" and Add[1][0] == "X" and Add[2][0]== "X":
+      tabuleiro(Add)
+      print("X wins")
+      vencedor=0
+      break
+    if Add[0][1] == "X" and Add[1][1] == "X" and Add[2][1]== "X":
+      tabuleiro(Add)
+      print("X wins")
+      vencedor=0
+      break
+    if Add[0][2] == "X" and Add[1][2] == "X" and Add[2][2]== "X":
+      tabuleiro(Add)
+      print("X wins")
+      vencedor=0
+      break
+
+    
     if Add[0][0] == "O" and Add[0][1] == "O" and Add[0][2]== "O":
       tabuleiro(Add)
       print("O wins")
@@ -66,6 +83,21 @@ while (jogador<9):
     if Add[2][2] == "O" and Add[2][1] == "O" and Add[0][2]== "O":
       tabuleiro(Add)
       print("0 wins")
+      vencedor=0
+      break
+    if Add[0][0] == "O" and Add[1][0] == "O" and Add[2][0]== "O":
+      tabuleiro(Add)
+      print("O wins")
+      vencedor=0
+      break
+    if Add[0][1] == "O" and Add[1][1] == "O" and Add[2][1]== "O":
+      tabuleiro(Add)
+      print("O wins")
+      vencedor=0
+      break
+    if Add[0][2] == "O" and Add[1][2] == "O" and Add[2][2]== "O":
+      tabuleiro(Add)
+      print("O wins")
       vencedor=0
       break
   else:
