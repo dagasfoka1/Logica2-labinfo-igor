@@ -1,0 +1,62 @@
+class Pessoa():
+    def __init__(self,id, nome, idade):
+        self.id=id
+        self.nome=nome
+        self.idade=idade
+class Professor(Pessoa):
+    def __init__(self,id, nome, idade, materia):
+        super().__init__(id,nome, idade)
+        self.materia = materia
+class Aluno(Pessoa):
+    def __init__(self,id, nome, idade,turma):
+        super().__init__(id,nome, idade)
+        self.turma=turma
+        self.notas = []
+    def Add_nota(self, nota):
+        media = (nota.valor1 + nota.valor2)/2
+        nota.media=(media)
+        nota.id=len(self.notas)
+        self.notas.append(nota)
+class Nota():
+    def __init__(self,id,valor1,valor2,disciplina,media=None):
+        self.id=id
+        self.valor1=valor1
+        self.valor2=valor2
+        self.disciplina=disciplina
+        self.media=media
+
+class Disciplina():
+    def __init__(self,id,nome,professor):
+        self.id=id
+        self.nome=nome
+        self.professor=professor
+        
+def Acharmateria(pessoa,lista_disciplina):
+    for nota in pessoa.notas:
+        disciplina=nota.disciplina
+        for materia in lista_disciplina:
+            if materia.nome==disciplina:
+                return materia
+lista_pessoas=[]
+lista_disciplina=[]
+
+disciplina1=Disciplina(len(lista_disciplina),"LBP","Igor")
+lista_disciplina.append(disciplina1)
+
+aluno1 = Aluno(len(lista_pessoas),"João",14,213)
+nota1 = Nota(None,8.0, 7.5,"LBP",None)
+aluno1.Add_nota(nota1)
+lista_pessoas.append(aluno1)
+
+professor1=Professor(len(lista_pessoas),"Igor",20,"LBP")
+lista_pessoas.append(professor1)
+def Apresentar(lista_pessoas,id):
+    for pessoa in lista_pessoas:
+            if pessoa.id==id:
+                nota=pessoa.notas
+                disciplina=Acharmateria(pessoa,lista_disciplina)
+                print(disciplina.nome)
+                print (f"A media do aluno ",pessoa.nome,"e nome das matérias e professores são: ")
+                for nota in pessoa.notas:
+                    print(f"Materia: {nota.disciplina} Média: {nota.media} Professor:  {disciplina.professor} \n")
+Apresentar(lista_pessoas, 0)
