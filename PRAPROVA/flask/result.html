@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Dados da Requisição</title>
+</head>
+<body>
+    <h1>Dados da Requisição</h1>
+    <p><strong>Desenvolvedor:</strong> {{ desenvolvedor }}</p>
+    <p><strong>Turma:</strong> {{ turma }}</p>
+    <p><strong>Professor:</strong> {{ professor }}</p>
+    <p><strong>Data de desenvolvimento:</strong> {{ data }}</p>
+    <p><strong>Nota de Dificuldade:</strong> {{ nota }}</p>
+    <p><strong>Confiante para a prova:</strong> {{ confianca }}</p>
+
+    <a href="/">Voltar ao formulário</a>
+</body>
+</html>
