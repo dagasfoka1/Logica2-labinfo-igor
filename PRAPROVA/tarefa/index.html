@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Minha Lista de Tarefas</h1>
+    <form action="/tarefas/adicionar" method="post">
+        <input type="text" name="descricao" placeholder="Nova tarefa" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>
+                {{ tarefa.descricao }} 
+                {% if tarefa.completa %} (Completa) {% else %}
+                    <a href="{{ url_for('todo.completar', id=tarefa.id) }}">Marcar como completa</a>
+                {% endif %}
+                <a href="{{ url_for('todo.excluir', id=tarefa.id) }}">Excluir</a>
+            </li>
+        {% else %}
+            <li>Nenhuma tarefa encontrada.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
