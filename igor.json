@@ -1,0 +1,47 @@
+{
+ "pessoa":{
+ 	"p1":{
+	 "idPessoa":1;
+	"nome":"João Souza";
+	"gmail":["joao.souza@example.com"]}
+	"p2":{
+	"idPessoa":2;
+	 "nome":"Maria Silva";
+	"gmail":"maria.silva@example.com"
+}
+ }
+
+
+"Desenvolvimento de Api": {
+	"envolvidos":pessoa["p1"]["nome"],pessoa["p2"]["nome"];
+	"funcao":{
+	pessoa["p1"]["nome"]:"revisar o código"
+	pessoa["p2"]["nome"]:"testar e criar endpoints"
+	};
+
+	"datainicio":"18/07/2024";
+	"dataentrefa":"13/08/2024"
+	
+}
+
+"Automação de Tarefas":{
+	"envolvidos":pessoa["p1"]["nome"];
+	"função":{pessoa["p1"]["nome"]:"analisar processos internos"};
+	"datainicio":"03/07/2024"
+	"dataentrada":null
+	
+}
+
+"Integração de sistemas":{
+
+	"funcao":{
+	pessoa["p1"]["nome"]:"configurar o servidor"
+	pessoa["p2"]["nome"]:"documentar a API"
+	};
+
+	"datainicio":null;
+	"dataentrefa":"23/08/2024"
+	
+}
+
+}
